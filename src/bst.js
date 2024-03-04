@@ -11,13 +11,19 @@ export default class BST {
         if (currentNode.data > insertedNode.data) {
           if (currentNode.left === null) {
             currentNode.left = insertedNode;
-            return this;
+            return this; //inserts node to left, breaks loop
           } else {
             currentNode = currentNode.left;
           }
         } else if (currentNode.data < insertedNode.data) {
-          currentNode.right = insertedNode;
-          return this;
+          if (currentNode.right === null) {
+            currentNode.right = insertedNode;
+            return this;
+            //inserts node to right, breaks loop
+          } else {
+            currentNode = currentNode.right;
+            //sets currentNode value and re-enters loop
+          }
         }
       }
     }
