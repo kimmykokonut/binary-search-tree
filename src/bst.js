@@ -24,6 +24,8 @@ export default class BST {
             currentNode = currentNode.right;
             //sets currentNode value and re-enters loop
           }
+        } else {
+          return this;
         }
       }
     }
