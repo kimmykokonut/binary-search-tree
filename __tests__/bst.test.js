@@ -97,13 +97,17 @@ describe('binarySearchTree', () => {
   test('it should return true if the first child node on the left is equal to 2', () => {
     expect(pbst.search(2)).toEqual(true);
   });
-
+  //verify method with non-key value
   test('it should return if the value 0 is not in the tree', () => {
     expect(pbst.search(0)).toEqual(false);
   });
-
+  //verify method can traverse right
   test('it should return true if the tree includes 7', () => {
     expect(pbst.search(7)).toEqual(true);
+  });
+  //verify method can go left and then right
+  test('it should return true if hte tree includes 5', () => {
+    expect(pbst.search(5)).toEqual(true);
   });
 
 });
