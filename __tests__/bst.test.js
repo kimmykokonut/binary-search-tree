@@ -90,4 +90,8 @@ describe('binarySearchTree', () => {
     expect(pbst.search(4)).toEqual(true);
   });
 
+  test('it should return false if the root node is not equal to 31', () => {
+    expect(pbst.search(31)).toEqual(false);
+  });
+
 });
