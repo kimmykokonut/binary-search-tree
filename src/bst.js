@@ -29,5 +29,10 @@ export default class BST {
         }
       }
     }
-  }  
+  }
+  search(value) {
+    return true;
+  }
+  
+
 }
